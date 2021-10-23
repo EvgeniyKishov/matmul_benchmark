@@ -1,0 +1,1 @@
+It seems that dll calls negatively affects performance. Both C and C# code proof this.
