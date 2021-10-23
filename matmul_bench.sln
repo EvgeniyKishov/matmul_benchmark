@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "matmul_C", "matmul_C\matmul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matmul_Csharp", "matmul_Csharp\matmul_Csharp.csproj", "{8748CBB8-B2EA-425E-B8AC-CEB27F722737}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatMulLib", "MatMulLib\MatMulLib.csproj", "{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,18 @@ Global
 		{8748CBB8-B2EA-425E-B8AC-CEB27F722737}.Release|x64.Build.0 = Release|Any CPU
 		{8748CBB8-B2EA-425E-B8AC-CEB27F722737}.Release|x86.ActiveCfg = Release|Any CPU
 		{8748CBB8-B2EA-425E-B8AC-CEB27F722737}.Release|x86.Build.0 = Release|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Debug|x64.Build.0 = Debug|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Debug|x86.Build.0 = Debug|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x64.ActiveCfg = Release|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x64.Build.0 = Release|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x86.ActiveCfg = Release|Any CPU
+		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

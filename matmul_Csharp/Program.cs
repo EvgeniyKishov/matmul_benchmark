@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MatMulLib;
 
 namespace matmul_Csharp
 {
+
     class Program
     {
         static double Rnd(Random random, double scale)
@@ -23,7 +25,7 @@ namespace matmul_Csharp
                     else
                         A[i][j] = Rnd(random, 10.0);
         }
-
+        /*
         static void MatMul(double[][] C, double[][] A, double[][] B, int n)
         {
             for (int i = 0; i < n; i++)
@@ -36,12 +38,12 @@ namespace matmul_Csharp
                 }
             //});
         }
-
+        */
         static void Main(string[] args)
         {
             Random random = new Random();
 
-            int n = 100;
+            int n = 1000;
             double[][] A;
             A = new double[n][];
             for (int i = 0; i < n; i++)
@@ -61,7 +63,7 @@ namespace matmul_Csharp
 
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            MatMul(C, A, B, n);
+            MatMulTest.MatMul(C, A, B, n);
             stopWatch.Stop();
             Console.WriteLine($"Execution Time: {stopWatch.ElapsedMilliseconds} ms");
             Console.ReadLine();
