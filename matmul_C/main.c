@@ -12,13 +12,16 @@ static void matmul2(struct matr* c, const struct matr* a, const struct matr* b, 
 {
 	int i = 0;
 	#pragma omp parallel for if (parl == USE_PARALLEL)
-	for (i = 0; i < c->n; i++)           
-		for (int j = 0; j < c->n; j++)
+	for (i = 0; i < c->n; i++) {
+		int j = 0;
+		//#pragma omp parallel for if (parl == USE_PARALLEL)
+		for (j = 0; j < c->n; j++)
 		{
 			c->v[i][j] = 0.0;
 			for (int k = 0; k < a->n; k++)
 				c->v[i][j] += a->v[i][k] * b->v[k][j];
 		}
+	}
 }
 
 double rnd(double scale)
@@ -46,7 +49,7 @@ void main()
 {
 	srand((unsigned int)time(0));
 
-	int n = 1000;
+	int n = 2000;
 	struct matr *a = create_matr(n, n);
 	rnd_fill_matr(a);
 	//printf("Matrix [A]: \n");
@@ -59,7 +62,7 @@ void main()
 
 	struct matr *c = create_matr(n, n);
 	clock_t begin = clock();
-	matmul2(c, a, b, SEQUENTIAL);
+	matmul2(c, a, b, USE_PARALLEL);
 	clock_t end = clock();
 	double time_spent = (double)(end - begin);
 	printf("time spent = %lf\n", time_spent);
