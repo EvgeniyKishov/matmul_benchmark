@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 #include "kemak_math.h"
 #include <omp.h>
 
-static void matmul2(struct matr* c, const struct matr* a, const struct matr* b)
+#define USE_PARALLEL 1
+#define SEQUENTIAL   0
+ 
+static void matmul2(struct matr* c, const struct matr* a, const struct matr* b, int parl)
 {
 	int i = 0;
-	#pragma omp parallel for
+	#pragma omp parallel for if (parl == USE_PARALLEL)
 	for (i = 0; i < c->n; i++)           
 		for (int j = 0; j < c->n; j++)
 		{
@@ -42,7 +46,7 @@ void main()
 {
 	srand((unsigned int)time(0));
 
-	int n = 100;
+	int n = 1000;
 	struct matr *a = create_matr(n, n);
 	rnd_fill_matr(a);
 	//printf("Matrix [A]: \n");
@@ -55,7 +59,7 @@ void main()
 
 	struct matr *c = create_matr(n, n);
 	clock_t begin = clock();
-	matmul2(c, a, b);
+	matmul2(c, a, b, SEQUENTIAL);
 	clock_t end = clock();
 	double time_spent = (double)(end - begin);
 	printf("time spent = %lf\n", time_spent);
