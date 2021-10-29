@@ -8,12 +8,12 @@
 #define USE_PARALLEL 1
 #define SEQUENTIAL   0
 
-struct matr2 {		
-	double** v;	
+struct matr2 {	
+	double** v;
 	int n, m;
 };
 
-struct matr2* create_matr2(int n, int m)
+struct matr2 *create_matr2(int n, int m)
 {
 	struct matr2* a = NULL;
 	a = calloc(1, sizeof(struct matr2));
