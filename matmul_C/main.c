@@ -38,7 +38,8 @@ double** create_matr_arr(int n)
 	return a;
 }
 
-static void matmul2(struct matr2* c, const struct matr2* a, const struct matr2* b, int parl)
+static void matmul2(struct matr2* c, const struct matr2* a, const struct matr2* b, 
+		    int parl)
 {
 	int i = 0;
 	//storing pointers gives a performance gain
