@@ -1,9 +1,10 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
 #include "kemak_math.h"
 #include <omp.h>
+#include <windows.h>
 
 #define USE_PARALLEL 1
 #define SEQUENTIAL   0
@@ -110,7 +111,9 @@ void main()
 {
 	srand((unsigned int)time(0));
 
-	int n = 1000;
+	MessageBox(NULL, TEXT("Привет"), TEXT("Мой заголовок"), MB_OK);
+
+	int n = 100;
 	struct matr2 *a = create_matr2(n, n);
 	//double **a = create_matr_arr(n);
 	rnd_fill_matr(a);
