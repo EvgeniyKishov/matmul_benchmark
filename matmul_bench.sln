@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		thoughts.txt = thoughts.txt
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inherit_test", "..\..\..\..\Desktop\dev_test\inherit_test\inherit_test\inherit_test.vcxproj", "{9B9AB0A3-2933-43DE-A39E-4C79AE872895}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,16 @@ Global
 		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x64.Build.0 = Release|Any CPU
 		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x86.ActiveCfg = Release|Any CPU
 		{25FF6A11-D472-4F57-9C7B-AE24C6B3E581}.Release|x86.Build.0 = Release|Any CPU
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Debug|x64.ActiveCfg = Debug|x64
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Debug|x64.Build.0 = Debug|x64
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Debug|x86.ActiveCfg = Debug|Win32
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Debug|x86.Build.0 = Debug|Win32
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Release|Any CPU.ActiveCfg = Release|Win32
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Release|x64.ActiveCfg = Release|x64
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Release|x64.Build.0 = Release|x64
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Release|x86.ActiveCfg = Release|Win32
+		{9B9AB0A3-2933-43DE-A39E-4C79AE872895}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

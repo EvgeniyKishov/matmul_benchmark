@@ -44,18 +44,18 @@ static void matmul2(struct matr2* c, const struct matr2* a, const struct matr2* 
 {
 	int i = 0;
 	//storing pointers gives a performance gain
-	double **cv = c->v,
-	       **av = a->v,
-	       **bv = b->v;
+	//double **cv = c->v,
+	//       **av = a->v,
+	//       **bv = b->v;
 	#pragma omp parallel for if (parl == USE_PARALLEL)
 	for (i = 0; i < c->n; i++) {
 		int j = 0;
 		//#pragma omp parallel for if (parl == USE_PARALLEL)
 		for (j = 0; j < c->n; j++)
 		{
-			cv[i][j] = 0.0;
+			c->v[i][j] = 0.0;
 			for (int k = 0; k < a->n; k++)
-				cv[i][j] += av[i][k] * bv[k][j];
+				c->v[i][j] += a->v[i][k] * b->v[k][j];
 		}
 	}
 }
@@ -111,9 +111,9 @@ void main()
 {
 	srand((unsigned int)time(0));
 
-	MessageBox(NULL, TEXT("Привет"), TEXT("Мой заголовок"), MB_OK);
+	//MessageBox(NULL, TEXT("Привет"), TEXT("Мой заголовок"), MB_OK);
 
-	int n = 100;
+	int n = 500;
 	struct matr2 *a = create_matr2(n, n);
 	//double **a = create_matr_arr(n);
 	rnd_fill_matr(a);
